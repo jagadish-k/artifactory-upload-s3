@@ -1,0 +1,33 @@
+name: "Artifact Upload"
+description: "Upload Zip Artifacts to S3 Artifactory"
+author: "Jagadish, K. <kasijagadish@gmail.com>"
+runs:
+  using: 'node16'
+  main: 'index.js'
+
+branding:
+  icon: upload-cloud
+  color: gray-dark
+inputs:
+  aws-region:
+    required: false
+    default: 'ap-south-1'
+  aws-access-key-id:
+    required: true
+  aws-secret-access-key:
+    required: true
+  s3-bucket:
+    description: "The S3 bucket where the files will be uploaded, eg: "
+    required: true
+  artifact:
+    required: true
+    description: "Path to the artifact to be uploaded. Eg: uploads/build-1.zip"
+  app-name:
+    description: "This is the application name that will be the folder name in the S3 artifactory. Eg.: app-a"
+    required: true
+  destination-dir:
+    description: "This is the destination path in the artifactory"
+    required: false
+    default: ''
+  
+

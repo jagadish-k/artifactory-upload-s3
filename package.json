@@ -1,0 +1,19 @@
+{
+  "name": "artifactory-upload-s3",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:jagadish-k/artifactory-upload-s3.git",
+  "author": "Jagadish, K. <kasijagadish@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "ncc build src/index.js --license licenses.txt"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.1052.0"
+  },
+  "devDependencies": {
+    "@actions/core": "^1.6.0",
+    "@actions/github": "^5.0.0",
+    "@vercel/ncc": "^0.33.1"
+  }
+}
